@@ -7,8 +7,8 @@
 }
 
 :root{
-    --color-primary: #191d2b;
-    --color-secondary: #27AE60;
+    --color-primary: #0e0d0d;
+    --color-secondary: #0096FF;
     --color-white: #FFFFFF;
     --color-black: #000;
     --color-grey0: #f8f8f8;
@@ -24,7 +24,7 @@
 }
 
 
-body{
+body{ 
     background-color: var(--color-primary);
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
@@ -104,11 +104,11 @@ section{
     position: fixed;
     z-index: 10;
     top: 50%;
-    right: 3%;
+    right: 0%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: end;
+    justify-content: end;
     transform: translateY(-50%);
     .active-btn{
         background-color: var(--color-secondary) !important;
@@ -121,9 +121,10 @@ section{
         padding: 1rem;
         cursor: pointer;
         background-color: var(--color-grey-4);
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
+        // width: 55px;
+        // height: 55px;
+        // border-radius: 50%;
+        border-radius: 30px 0px 0px 30px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -137,10 +138,31 @@ section{
     }
 }
 
+.cnt-1{
+    width: 100px;
+    height: 55px;
+
+}
+.cnt-2{
+    width: 90px;
+    height: 55px;
+}
+.cnt-3{
+    width: 80px;
+    height: 55px;
+}
+.cnt-4{
+    width: 70px;
+    height: 55px;
+}
+.cnt-5{
+    width: 60px;
+    height: 55px;
+}
 
 /*Header content*/
 .header-content{
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(2, 1fr);
     height: 100%;
     .left-header{
@@ -160,15 +182,24 @@ section{
 
         }
         .image{
-            border-radius: var(--br-sm-2);
+            // border-radius: var(--br-sm-2);
+            border-radius: 50%;
             width: 68%;
             height: 90%;
             margin-left: 4rem;
             background-color: var(--color-black);
             transition: all .4s ease-in-out;
             img{
-                width: 100%;
-                height: 100%;
+                // width: 100%;
+                // height: 100%;
+                height: 300px;
+                width: 300px;
+                border-radius: 50%;
+                margin-top: 100px;
+                margin-bottom: 500px;
+                margin-right: 80%;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+                cursor: pointer;
                 object-fit: cover;
                 transition: all .4s ease-in-out;
                 filter: grayscale(100%);
@@ -179,5 +210,20 @@ section{
 
         }
     }
+    .right-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 18rem;
+        .name {
+            font-size: 3rem;
+            span { color: var(--color-secondary); }
+        }
+        p {
+            margin: 1.5rem 0;
+            line-height: 2rem;
+        }
+    }
 }
+
 
